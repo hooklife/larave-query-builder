@@ -1,0 +1,25 @@
+{
+    "name": "hooklife/query-builder",
+    "authors": [
+        {
+            "name": "hooklife",
+            "email": "miaogaopeng123@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Hooklife\\QuyerBuilder\\": "src"
+        }
+    },
+    "require": {
+        "php": "^8.0",
+        "laravel/framework": "^8.0",
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Hooklife\\QuyerBuilder\\ServiceProvider"
+            ]
+        }
+    }
+}

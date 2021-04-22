@@ -1,0 +1,14 @@
+<?php
+
+namespace DummyNamespace;
+
+use Hooklife\QueryBuilder\QueryBuilder;
+use Hooklife\QueryBuilder\Concerns\Filterable;
+use Hooklife\QueryBuilder\Concerns\Pageable;
+
+class DummyClass extends QueryBuilder
+{
+   use Pageable, Filterable;
+   public array $simpleFilters = [];
+   public array $blacklistInputs = ['id'];
+}
