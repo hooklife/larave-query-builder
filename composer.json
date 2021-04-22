@@ -18,7 +18,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Hooklife\\QuyerBuilder\\ServiceProvider"
+                "Hooklife\\QueryBuilder\\ServiceProvider"
             ]
         }
     }
