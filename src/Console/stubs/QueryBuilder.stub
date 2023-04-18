@@ -8,7 +8,7 @@ use Hooklife\QueryBuilder\Concerns\Pageable;
 
 class DummyClass extends QueryBuilder
 {
-   use Pageable, Filterable;
+   use Filterable;
    public array $simpleFilters = [];
    public array $blacklistInputs = ['id'];
 }
