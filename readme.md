@@ -17,11 +17,12 @@ class User extends Model
 ```
 
 ### 创建 QueryBuilder
+
 Querybuilder 匹配规则 为 {ModelName}QueryBuilder.php，例如下面生成的 QueryBuilder 会自动匹配 UserModel
+
 ```shell
 php artisan make:queryBuilder UserQueryBuilder
 ```
-
 
 ### 使用 QueryBuilder
 
@@ -50,7 +51,9 @@ class UserQueryBuilder extends QueryBuilder
 ```
 
 ## 自带插件
+
 ### filterable
+
 ```php
 namespace App\QueryBuilders;
 use Hooklife\QueryBuilder\Concerns\Filterable;
@@ -63,7 +66,9 @@ class UserQueryBuilder extends QueryBuilder
     ];
 }
 ```
+
 以上的例子相当于
+
 ```php
 namespace App\QueryBuilders;
 class UserQueryBuilder extends QueryBuilder
@@ -78,7 +83,8 @@ class UserQueryBuilder extends QueryBuilder
 }
 ```
 
-###sortable
+### sortable
+
 ```php
 namespace App\QueryBuilders;
 use Hooklife\QueryBuilder\Concerns\Sortable;
@@ -94,6 +100,7 @@ class UserQueryBuilder extends QueryBuilder
 ```
 
 以上的例子相当于
+
 ```php
 namespace App\QueryBuilders;
 class UserQueryBuilder extends QueryBuilder
