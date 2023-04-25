@@ -21,14 +21,17 @@ class QueryBuilder
      */
     public Builder $query;
 
-    public function __construct(Builder $query, $input)
+    public function __construct($input, Builder $query)
     {
         $this->query = $query;
         $this->input = $input;
         $this->bootTraits();
-        if (method_exists($this, 'boot')) {
-            call_user_func([$this, 'boot'], $input, $query);
-        }
+        call_user_func([$this, 'boot'], $input, $query);
+    }
+
+    protected function boot(array $input, Builder $query)
+    {
+
     }
 
     public function bootTraits()
