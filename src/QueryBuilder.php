@@ -26,10 +26,10 @@ class QueryBuilder
         $this->query = $query;
         $this->input = $input;
         $this->bootTraits();
-        call_user_func([$this, 'boot'], $input, $query);
+        $this->boot($input, $query);
     }
 
-    protected function boot(array $input, Builder $query)
+    protected function boot(array $input, $query)
     {
 
     }
