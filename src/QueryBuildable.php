@@ -22,7 +22,8 @@ trait QueryBuildable
             $queryBuilder = $this->provideQueryBuilder();
         }
         // Create the model filter instance
-        $this->queryBuilder = new $queryBuilder($this->removeEmptyInput($input), $query);
+        $this->queryBuilder = new $queryBuilder();
+        $this->queryBuilder->setup($this->removeEmptyInput($input), $query);
         // Return the filter query
         return $this->handle();
     }
