@@ -21,7 +21,7 @@ class QueryBuilder
      */
     public Builder $query;
 
-    protected function setup(array $input, $query)
+    public function setup(array $input, $query)
     {
         $this->query = $query;
         $this->input = $input;
